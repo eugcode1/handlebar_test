@@ -1,0 +1,23 @@
+{
+  "name": "handlerbar_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack src/js/app.js dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euglin1130/handlebar_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euglin1130/handlebar_test/issues"
+  },
+  "homepage": "https://github.com/euglin1130/handlebar_test#readme",
+  "devDependencies": {
+    "webpack": "^3.3.0"
+  }
+}

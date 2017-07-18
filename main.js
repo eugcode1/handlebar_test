@@ -3,7 +3,17 @@ ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/pets-data.js
 ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
         // This is where we'll do something with the retrieved data
-        var data = JSON.parse(ourRequest.responseText);
+        var data = ourRequest.responseText;
+       // data.replace(/}([^}]*)$/,'$1')
+        var pos = data.lastIndexOf('}');
+        data = data.substring(0,pos)
+        console.log(data);
+
+        data += ', "a": {"pets": 123}} ';
+        console.log(data);
+        data = JSON.parse(data);
+
+        console.log("hi");
         createHTML(data);
     } else {
         console.log("We connected to the server, but it returned an error.");

@@ -162,6 +162,17 @@ use 'this' -- when no attribute name
             </div>
         </div>
     {{/each}}
+    {{pets}}<!--objects-->
+    {{#with a}}
+        {{pets}}<!--123-->
+    {{/with}}
+    ---------
+    {{#each pets as |value key|}}
+        {{#each child as |childValue childKey|}}
+        <p style="color: red;">{{@value}}</p>
+        {{/each}}
+    {{/each}}
+
 </script>
 <script src="handlebars-v4.0.10.js"></script>
 <script src="main.js"></script>
